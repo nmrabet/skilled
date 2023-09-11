@@ -1,0 +1,51 @@
+:root {
+  --fw-xbold: 800;
+  --fw-bold: 700;
+  --fw-medium: 500;
+
+  --fs-small: 1rem;
+  --fs-medium: 1.125rem;
+  --fs-heading-small: 1.5rem;
+  --fs-heading-medium: 2rem;
+  --fs-heading-large: 2.5rem;
+  --fs-heading-xlarge: 3.5rem;
+
+  --color-greyish: #666ca3;
+  --color-dark: #13183f;
+  --color-grey: #83869a;
+  --color-fuchia: #f74780;
+  --color-pink: #ffa7c3;
+
+  --color-primary-gradient: linear-gradient(180deg, #f02aa6, #ff6f48);
+  --color-secondary-gradient: linear-gradient(180deg, #4851ff, #f02aa6);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.btn-1,
+.btn-2,
+.btn-3 {
+  border-radius: 10px;
+  padding: 0.8em 1em;
+  font-weight: var(--fw-bold);
+}
+
+.btn-1 {
+  background-color: var(--color-dark);
+}
+
+.btn-2 {
+  background-color: var(--color-primary-gradient);
+}
+
+.btn-3 {
+  background-color: var(--color-secondary-gradient);
+}
