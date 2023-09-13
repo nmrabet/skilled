@@ -85,12 +85,7 @@ body {
 }
 
 .hero--img {
-  width: 100%;
   margin: 0 auto;
-}
-
-.img {
-  width: 100%;
 }
 
 main {
@@ -116,6 +111,7 @@ main h3 {
 }
 
 .container > * {
+  margin-top: -5px;
   margin-bottom: 1em;
 }
 
@@ -153,3 +149,33 @@ footer {
 
 /* Media queries */
 
+@media screen and (min-width: 768px) {
+  .intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+  }
+
+  .hero--img {
+    margin-top: -120px;
+    margin-right: -300px;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-flow: wrap;
+    margin: 0 auto;
+  }
+
+  main h3 {
+    max-width: 360px;
+    height: 325px;
+  }
+
+  .container {
+    max-width: 360px;
+  }
+}
