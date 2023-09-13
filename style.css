@@ -47,9 +47,19 @@ body {
   background-color: var(--color-dark);
 }
 
+.btn-1:hover,
+.btn-1:focus {
+  background-color: var(--color-greyish);
+}
+
 .btn-2 {
   background-image: var(--color-primary-gradient);
   padding: 1.4em 3em;
+}
+
+.btn-2:hover,
+.btn-2:focus {
+  opacity: 0.5;
 }
 
 .btn-3 {
@@ -57,19 +67,23 @@ body {
   padding: 1.4em 3em;
 }
 
+.btn-3:hover,
+.btn-3:focus {
+  opacity: 0.5;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2em 1em;
-}
-
-.presentation {
-  margin: 1em;
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 1.8em;
 }
 
 .presentation > * {
   margin-bottom: 1em;
+  max-width: 700px;
 }
 
 .presentation h2 {
@@ -93,7 +107,15 @@ main {
   padding: 1em 0;
 }
 
-main h3 {
+.presentation,
+.intro,
+.main-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.main-container h3 {
   background-image: var(--color-primary-gradient);
   color: #fff;
   padding: 1em;
@@ -130,9 +152,8 @@ main h3 {
   color: var(--color-greyish);
 }
 
-.container button {
-  background: none;
-  border: none;
+.get-started-btn {
+  text-decoration: none;
   font-size: var(--fs-medium);
   font-weight: var(--fw-bold);
   color: var(--color-fuchia);
@@ -141,10 +162,15 @@ main h3 {
 
 footer {
   background-color: var(--color-dark);
+}
+
+.footer-container {
   padding: 3em 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /* Media queries */
@@ -154,7 +180,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow-x: hidden;
+    overflow: hidden;
+  }
+
+  .presentation {
+    max-width: 900px;
   }
 
   .hero--img {
@@ -162,7 +192,7 @@ footer {
     margin-right: -300px;
   }
 
-  main {
+  .main-container {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -170,12 +200,18 @@ footer {
     margin: 0 auto;
   }
 
-  main h3 {
+  .main-container h3 {
     max-width: 360px;
     height: 325px;
   }
 
   .container {
     max-width: 360px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .intro {
+    overflow: visible;
   }
 }
